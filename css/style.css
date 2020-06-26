@@ -380,7 +380,8 @@ section#sobre {
   justify-content: center;
 }
 
-.projetos-hover:hover {
+.projetos-hover:hover,
+.projetos-hover:focus {
   background-image: linear-gradient(
     to right,
     rgba(128, 0, 128, 0.7),
