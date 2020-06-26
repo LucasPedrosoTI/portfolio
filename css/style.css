@@ -85,7 +85,6 @@ header::after {
   background-color: #252525;
   padding: 0;
   z-index: 5;
-  padding-top: 30px;
 }
 
 .menu {
@@ -295,6 +294,7 @@ section#sobre {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 30px;
+  grid-gap: 50px;
 }
 
 .servicos-item {
@@ -449,6 +449,10 @@ footer li {
   padding: 30px;
 }
 
+footer a {
+  font-size: 30px;
+}
+
 @media (max-width: 800px) {
   .sobre-imagem img {
     margin-left: 0;
@@ -459,6 +463,11 @@ footer li {
   header {
     width: 100vh;
   }
+
+  .sticky {
+    padding-top: 30px;
+  }
+
   section {
     width: 100vh;
     text-align: center;
