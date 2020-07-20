@@ -1,22 +1,3 @@
-$(document).ready(function () {
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      $(".arrow-up").fadeIn();
-    } else {
-      $(".arrow-up").fadeOut();
-    }
-  });
-  $(".arrow-up").click(function () {
-    $("html, body").animate(
-      {
-        scrollTop: 0,
-      },
-      800
-    );
-    return false;
-  });
-});
-
 // PRELOADER
 $(window).on("load", function () {
   $("#preloader").delay(3000).fadeOut("slow");
@@ -24,12 +5,12 @@ $(window).on("load", function () {
 
 // STICKY ADD
 window.onscroll = function () {
-  myFunction();
+  toggleStickyAdd();
 };
 var header = document.getElementById("navigation");
 var sticky = header.offsetTop;
 
-function myFunction() {
+function toggleStickyAdd() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
   } else {
@@ -89,6 +70,11 @@ $(window).on("scroll", function (e) {
     "animate__animated animate__bounceIn",
     projetosVisible
   );
+
+  $("#projetos .projetos-item").toggleClass(
+    "animate__animated animate__fadeOutDown",
+    !projetosVisible
+  );
 });
 
 /**
@@ -135,3 +121,48 @@ if (width <= 700) {
     $("#navigation").removeClass("sticky");
   });
 }
+
+/**
+ * PROJECTS FILTERING
+ */
+$(".projetos-navigation li").on("click", function (e) {
+  const { id } = e.target;
+  const projects = document.querySelectorAll(".projetos-item");
+
+  function removeHidden(project) {
+    if (project.classList.contains("hidden")) {
+      project.classList.remove("hidden");
+    }
+  }
+
+  function addHidden(project, condition) {
+    if (!project.classList.contains(condition)) {
+      project.classList.add("hidden");
+    }
+  }
+
+  if (id === "all") {
+    projects.forEach((project) => {
+      removeHidden(project);
+    });
+  }
+
+  if (id === "node") {
+    projects.forEach((project) => {
+      removeHidden(project);
+      addHidden(project, "node");
+    });
+  }
+  if (id === "react") {
+    projects.forEach((project) => {
+      removeHidden(project);
+      addHidden(project, "react");
+    });
+  }
+  if (id === "other") {
+    projects.forEach((project) => {
+      removeHidden(project);
+      addHidden(project, "other");
+    });
+  }
+});

@@ -11,10 +11,11 @@
 
     <script src="./js/index.js" defer></script>
 
+    <link rel="shortcut icon" href="./img/logo/logo-sem-fundo.png" type="image/x-icon">
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/animations.css">
-    <title>Home</title>
+    <title>Lucas's Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 </head>
 
@@ -69,7 +70,7 @@
     <section id="sobre">
         <div class="sobre-container">
             <div class="sobre-imagem">
-                <img src="./img/perfil3-sem-fundo.png" alt="perfil3-sem-fundo" height="600">
+                <img src="./img/perfil4-sem-fundo.png" alt="perfil3-sem-fundo" height="600">
             </div>
             <div class="sobre-article">
                 <article>
@@ -78,10 +79,10 @@
                         Me formei inicialmente em <strong>
                             Hidráulica e Saneamento Ambiental pela Fatec-SP
                         </strong> em 2018. Já no 3º semestre do curso, consegui uma bolsa pelo Ciência sem Fronteiras na
-                        modalidade Graduação Sanduiche para realizar 3 meses de curso intensivo em <strong>
+                        modalidade Graduação Sanduíche para realizar 3 meses de curso intensivo em <strong>
                             inglês na Rutgers
                             University
-                        </strong> e 2 períodos de <strong>Engenharia Ambiental na Marquette Univeristy</strong>. Voltei
+                        </strong> e 2 períodos de <strong>Engenharia Ambiental na Marquette University</strong>. Voltei
                         em 2015 com muitas experiências, conhecimentos adquiridos e <em>inglês fluente</em>, contudo, o
                         setor de construção cívil estava em cenário de crise.
                     </p>
@@ -95,7 +96,7 @@
                         <strong>Account Specialist</strong> no Brasil.
                     </p>
                     <p>
-                        Em 2018, após a gradução e ainda sem voltar para minha incial área de estudo, tinha que decidir
+                        Em 2018, após a graduação e ainda sem voltar para minha inicial área de estudo, tinha que decidir
                         entre continuar investindo nessa área ou mudar completamente e ir para a tecnologia. Então, na
                         metade de 2019, ainda sem coragem de fazer a migração de área, iniciei graduação em
                         <strong>Engenharia Civil</strong>. No mesmo período, realizei cursos de <strong> lógica de
@@ -130,7 +131,7 @@
             <h2 class="titulo-section">Missão</h2>
             <h3>O que me move</h3>
             <p>
-                Sou muito dinâmico e tenhos muitas ideias. Gosto de um ambiente onde posso me envolver com diferente
+                Gosto de um ambiente onde posso me envolver com diferente
                 projetos e sempre aprender coisas novas. O fato da tecnologia ser uma ótima maneira de ajudar a resolver
                 problemas do dia-a-dia das pessoas é um dos principais motivos que me faz amar programar.
             </p>
@@ -239,9 +240,29 @@
             </p>
         </article>
 
+        <ul class="projetos-navigation">
+            <li id="all">Todos</li>
+            <li id="node">NodeJs</li>
+            <li id="react">ReactJS</li>
+            <li id="other">Outros</li>
+        </ul>
+
         <article class="servicos-grid">
 
-            <div class="projetos-item">
+            <div class="projetos-item react">
+                <a href="https://lucas-ravenous.netlify.app/" target="_blank">
+                    <img src="./img/ravenous.gif" alt="meu posto">
+                    <div class="projetos-hover ">
+                        <div class="projetos-hover-text">
+                            <h3>Ravenous</h3>
+                            <a href="https://lucas-ravenous.netlify.app/" target="_blank" class="zoom">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="projetos-item node">
                 <a href="https://pi-app-meuposto.herokuapp.com/" target="_blank">
                     <img src="./img/meu-posto.gif" alt="meu posto">
                     <div class="projetos-hover ">
@@ -254,7 +275,7 @@
                     </div>
                 </a>
             </div>
-            <div class="projetos-item">
+            <div class="projetos-item node">
                 <a href="https://pedrada-celulares.herokuapp.com/login" target="_blank">
                     <img src="./img/celulares.gif" alt="celulares">
                     <div class="projetos-hover">
@@ -267,7 +288,7 @@
                     </div>
                 </a>
             </div>
-            <div class="projetos-item">
+            <div class="projetos-item node">
                 <a href="https://github.com/ALESSANDROLMENEZES/coronaWeb" target="_blank">
                     <img src="./img/corona.png" alt="Corona">
                     <div class="projetos-hover">
@@ -280,7 +301,7 @@
                     </div>
                 </a>
             </div>
-            <div class="projetos-item">
+            <div class="projetos-item node react">
                 <a href="https://lucas-ecoleta.netlify.app/" target="_blank">
                     <img src="./img/ecoleta.gif" alt="eColeta">
                     <div class="projetos-hover">
@@ -293,7 +314,7 @@
                     </div>
                 </a>
             </div>
-            <div class="projetos-item">
+            <div class="projetos-item react">
                 <a href="https://dashboard-react-lucas.netlify.app/" target="_blank">
                     <img src="./img/react-dashboard.png" alt="React Dashboard">
                     <div class="projetos-hover">
@@ -306,7 +327,7 @@
                     </div>
                 </a>
             </div>
-            <div class="projetos-item">
+            <div class="projetos-item other">
                 <a href="http://lucas-game.netlify.com/" target="_blank">
                     <img src="./img/complete-game.gif" alt="Imersão Game Dev">
                     <div class="projetos-hover">
@@ -347,10 +368,6 @@
     <a href="#home" class="arrow-up">
         <i class="fas fa-arrow-circle-up"></i>
     </a>
-
-
-
-
 
 </body>
 

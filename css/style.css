@@ -15,8 +15,39 @@ body {
   padding: 0;
 }
 
+@keyframes hidden {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+
+  50% {
+    display: block;
+    opacity: 0.5;
+  }
+
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes hidden {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 .hidden {
   display: none;
+  opacity: 0;
 }
 
 .bars {
@@ -281,7 +312,6 @@ section#sobre {
 }
 
 .servicos-texto {
-  margin-bottom: 40px;
   line-height: 30px;
 }
 
@@ -351,6 +381,20 @@ section#sobre {
 
 #projetos {
   background-color: #fff;
+}
+
+.projetos-navigation {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 20px auto;
+  transition: all 1s ease-in-out;
+}
+
+.projetos-navigation li {
+  color: #0099ff;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
 }
 
 .projetos-item {
