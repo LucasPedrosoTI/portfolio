@@ -122,6 +122,18 @@ if (width <= 700) {
   });
 }
 
+function removeHidden(project) {
+  if (project.classList.contains("hidden")) {
+    project.classList.remove("hidden");
+  }
+}
+
+function addHidden(project, condition) {
+  if (!project.classList.contains(condition)) {
+    project.classList.add("hidden");
+  }
+}
+
 /**
  * PROJECTS FILTERING
  */
@@ -129,40 +141,34 @@ $(".projetos-navigation li").on("click", function (e) {
   const { id } = e.target;
   const projects = document.querySelectorAll(".projetos-item");
 
-  function removeHidden(project) {
-    if (project.classList.contains("hidden")) {
-      project.classList.remove("hidden");
-    }
-  }
-
-  function addHidden(project, condition) {
-    if (!project.classList.contains(condition)) {
-      project.classList.add("hidden");
-    }
-  }
-
   if (id === "all") {
     projects.forEach((project) => {
-      removeHidden(project);
+      return removeHidden(project);
     });
   }
 
   if (id === "node") {
     projects.forEach((project) => {
       removeHidden(project);
-      addHidden(project, "node");
+      return addHidden(project, "node");
     });
   }
   if (id === "react") {
     projects.forEach((project) => {
       removeHidden(project);
-      addHidden(project, "react");
+      return addHidden(project, "react");
+    });
+  }
+  if (id === "typescript") {
+    projects.forEach((project) => {
+      removeHidden(project);
+      return addHidden(project, "typescript");
     });
   }
   if (id === "other") {
     projects.forEach((project) => {
       removeHidden(project);
-      addHidden(project, "other");
+      return addHidden(project, "other");
     });
   }
 });
